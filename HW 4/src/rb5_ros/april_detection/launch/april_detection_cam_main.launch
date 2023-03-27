@@ -1,0 +1,20 @@
+<launch>
+  
+  <include file="$(find rb5_vision)/launch/rb_camera_main_ocv.launch" />
+  <node pkg="april_detection" type="april_detection_node" name="april_detection_node" output="screen" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="marker0_trans" args="0 0.23 0 -0.5 -0.5 0.5 0.5 map marker_0 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker8_trans" args="0 2.818 0 -0.5 -0.5 0.5 0.5 map marker_8 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="marker1_trans" args="0.23 3.048 0 -0.7071 0 0 0.7071 map marker_1 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker7_trans" args="2.818 3.048 0 -0.7071 0 0 0.7071 map marker_7 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="marker4_trans" args="3.048 2.818 0 0.5 -0.5 0.5 -0.5 map marker_4 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker5_trans" args="3.048 0.23 0 0.5 -0.5 0.5 -0.5 map marker_5 100" />
+
+  <node pkg="tf" type="static_transform_publisher" name="marker2_trans" args="0.23 0 0 0 -0.7071 0.7071 0 map marker_2 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="marker3_trans" args="1.60 1.35 0 -0.7071 0 0 0.7071 map marker_3 100" />
+  <node pkg="tf" type="static_transform_publisher" name="marker6_trans" args="1.35 1.47 0 0.5 -0.5 0.5 -0.5 map marker_6 100" />
+
+</launch>
